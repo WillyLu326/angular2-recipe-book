@@ -13,12 +13,12 @@ export const RECIPES_ROUTES: Routes = [
     component: RecipeStartComponent
   },
   {
-    path: ':id',
-    component: RecipeDetailComponent
-  },
-  {
     path: 'add',
     component: RecipeEditComponent
+  },
+  {
+    path: ':id',
+    component: RecipeDetailComponent
   },
   {
     path: ':id/edit',
