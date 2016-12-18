@@ -7,7 +7,7 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe('Schnitzel', 'Very tasty',
-      'http://weknowyourdreams.com/images/food/food-07.jpg',
+      'http://rtv21.tv/web/wp-content/uploads/2016/11/fast.jpg',
       [ new Ingredient('French Fries', 2),
         new Ingredient('Pork Meat', 1)
     ]),
