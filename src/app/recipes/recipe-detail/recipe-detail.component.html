@@ -10,9 +10,14 @@
     </div>
 
     <div class="col-sm-12">
-      <button class="btn btn-success">To Shopping List</button>
-      <button class="btn btn-primary">Edit</button>
-      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-success"
+              (click)="addIngredientsToShoppingList()">
+        To Shopping List
+      </button>
+      <button class="btn btn-primary"
+              (click)="onEdit()">Edit</button>
+      <button class="btn btn-danger"
+              (click)="onDelete(selectedRecipe)">Delete</button>
     </div>
   </div>
   <hr>
@@ -24,7 +29,18 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      Ingredients
+      <div class="panel-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Ingredients</div>
+            <div class="list-group">
+              <div class="list-group-item"
+                   *ngFor="let item of selectedRecipe.ingredients">
+                {{ item.name }} ({{ item.amount }})
+              </div>
+            </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
